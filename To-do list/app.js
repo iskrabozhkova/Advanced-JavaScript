@@ -1,10 +1,3 @@
-// document.querySelector('.plus').onclick = function () {
-//     document.querySelector('#tasks').innerHTML += `
-//         <div class="task">
-//                 ${document.querySelector('#newTask input').value}
-//         </div>
-//     `
-// }
 
 const todoInput = document.querySelector('.todoInput');
 const todoButton = document.querySelector('.plus');
