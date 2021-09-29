@@ -1,0 +1,58 @@
+body{
+    background-color: #006666
+}
+h1, form{
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button{
+    border: none;
+    padding: 10px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+form button{
+    margin: 5px;
+    color: white;
+    background-color:goldenrod;
+}
+form button:hover{
+    background-color: #009999;
+    border: 1px solid #a2c7a6;
+}
+#tasks{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    margin-left: 640px;
+    margin-top: 15px;
+}
+.todo{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+    margin-left: 600px;
+    margin-top: 15px;
+    border-radius: 5px;
+    list-style-type:none;
+}
+.todo li {
+    flex: 1
+}
+.todo button {
+    margin: 3px;
+    padding: 5px 10px;
+    background-color:#c5546d;
+    color: white;
+    border: none;
+    pointer-events: none;
+    border-radius: 5px;
+}
