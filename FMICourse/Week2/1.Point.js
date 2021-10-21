@@ -10,7 +10,8 @@
      return Math.sqrt(Math.pow(point2.x - this.x, 2)  + Math.pow(point2.y - this.y, 2));
  }
 
-console.log(point1.getDistance(point2))
+console.log(point1.getDistance(point2));
+
 
 
 
