@@ -15,10 +15,8 @@ console.log(point1.getDistance(point2))
 
 //task2
 var Circle = function(x,y,r){
-    this.x = x;
-    this.y = y;
+    Point.call(this,x,y);
     this.r = r;
-
 }
 
 Circle.prototype = Object.create(Point.prototype);
@@ -49,8 +47,7 @@ var cir2 = new Circle(10,12,3);
 //task3
 
 var Rectangle = function(x,y,a,b){
-    this.x = x;
-    this.y = y;
+    Point.call(this,x,y);
     this.a = a;
     this.b = b;
 }
@@ -72,10 +69,7 @@ console.log(rect1.getLengthOfDiagonals());
 
 //task 4
 var RectanglePrism = function(x,y,a,b, c){
-    this.x = x;
-    this.y = y;
-    this.a = a;
-    this.b = b;
+    Rectangle.call(this,x,y,a,b);
     this.c = c;
 }
 RectanglePrism.prototype = Object.create(Rectangle.prototype);

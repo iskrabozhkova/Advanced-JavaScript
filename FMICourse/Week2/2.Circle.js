@@ -13,10 +13,8 @@ Point.prototype.getDistance = function(point2){
 console.log(point1.getDistance(point2))
 
 var Circle = function(x,y,r){
-    this.x = x;
-    this.y = y;
+    Point.call(this,x,y);
     this.r = r;
-
 }
 
 Circle.prototype = Object.create(Point.prototype);
