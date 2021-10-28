@@ -63,6 +63,7 @@ function curry(fn){
                 var args2 = [].slice.call(arguments);
                 args2 = args.concat(args2);
                 return curried.apply(this, args2);
+               
             }
         }
     }
@@ -70,4 +71,20 @@ function curry(fn){
 
 var curried = curry(add);
 var res = curried(1)(2,3);
-console.log(res);
+//console.log(res);
+
+function addOther(a){
+    return function(b){
+        return function(c){
+            return a + b + c;
+        }
+    }
+}
+
+var sumOther = addOther(1);
+var sumOther1 = sumOther(2);
+var sumOther2 = sumOther1(3);
+
+console.log(sumOther2); 
+
+ 

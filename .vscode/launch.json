@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\FMICourse\\Week3\\fromLecture.js"
+            "program": "${workspaceFolder}\\FMICourse\\Week3\\divideArray.js"
         }
     ]
 }
