@@ -57,12 +57,12 @@ function curry(fn){
     return function curried(){
         var args = [].slice.call(arguments);
         if(arguments.length >= fn.length){
-            return fn.apply(this, arguments);
+            return fn.apply(undefined, arguments);
         }else{
             return function(){
                 var args2 = [].slice.call(arguments);
                 args2 = args.concat(args2);
-                return curried.apply(this, args2);
+                return curried.apply(undefined, args2);
                
             }
         }
