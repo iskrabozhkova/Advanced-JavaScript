@@ -10,13 +10,12 @@ class RevisionStream extends stream.Transform{
      chunk = this.prevLastPiece + chunk;
      const changedChunk = this._changeChunk(chunk);
      this.push(changedChunk);
-      next();
+     next();
    }
    _changeChunk(chunk){
      const changedChunk =  chunk.replace(/\bhave\b/gm, '****');
      this.prevLastPiece= changedChunk?.split(/\s+/).slice(-1)[0];
      return changedChunk.slice(0,changedChunk.length - this.prevLastPiece.length);
-     
    }
 }
   
