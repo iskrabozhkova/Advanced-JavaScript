@@ -41,12 +41,26 @@ const server = http.createServer((req, res) =>{
 })
 
 server.listen(PORT, hostname, () => {
-    console.log(`🏃‍♂️🏃‍♂️🏃‍♂️`);
-    
-  
-    (async function () {
-      const x = new AsyncDelivery();
-      console.log(await x.someProp);
-    })();
+    console.log(`Server is running`);
+    class AsyncDelivery {
+      constructor() {
+        return new Proxy(this, {
+          get: (obj, prop) => {
+            return new Promise((resolve) => {
+              http.get(`http://${hostname}:${PORT}/load/:${prop}`, (res) => {
+                let storedRes = '';
+                res.on('data', (chunk) => storedRes += chunk);
+                res.on('end', () => resolve(storedRes))
+              });
+            });
+          }
+        })
+      
+    }
+}
+      (async function () {
+        const x = new AsyncDelivery();
+        console.log(await x.testProp);
+      })();
   });
 
