@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
     const isProd = !!env.production;
@@ -29,12 +30,13 @@ module.exports = (env) => {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack App',
-            filename: './index.html'
+            filename: './index.html',
+            scriptLoading: 'blocking'
         })
     ],
     devServer: {
         static: {
-            directory: path.join(__dirname, dist)
+            directory: path.join(__dirname, 'dist')
         },
         compress: true,
         port: 9000
