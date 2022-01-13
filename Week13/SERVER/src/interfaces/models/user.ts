@@ -1,4 +1,4 @@
-import {Optional, Model, ModelDefined} from 'sequelize/types';
+import {Optional, Model} from 'sequelize/types';
 import { BaseKeys, IBase } from "./base";
 
 export interface IUserAttributes extends IBase{
@@ -7,7 +7,6 @@ export interface IUserAttributes extends IBase{
     name: string;
     info: string | null;
 }
-
 
 export interface IUserCreationAttributes extends Optional<
 IUserAttributes,
@@ -21,18 +20,4 @@ export interface IUserInstanceMethods {
 export interface IUserModelInstance extends Model<IUserAttributes, IUserCreationAttributes>, IUserAttributes, IUserInstanceMethods{
 
 }
-
-// export class User extends Model<IUserAttributes, IUserCreationAttributes> implements IUserAttributes, IUserInstanceMethods{
-//     declare id: number;
-//     declare name: string;
-//     declare password: string;
-//     declare email: string;
-//     declare info: string | null;
-
-//     declare readonly createdAt: Date;
-//     declare readonly updatedAt: Date;
-
-//     declare authenticate: (password: string) => Promise<boolean>;
-
-// }
 

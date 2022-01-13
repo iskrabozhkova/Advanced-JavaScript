@@ -17,10 +17,6 @@ connect().then(() => {
     }).then(user => {
         user.email = 'best@abv.bg'
     })
-    // models.user.findByPk(1).then(user => {
-    //     user?.destroy();
-    // })
-
 
     app.listen(8080, () => {
         console.log('Server is listening on :8080');

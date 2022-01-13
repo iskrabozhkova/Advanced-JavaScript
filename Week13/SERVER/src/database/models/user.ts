@@ -1,5 +1,5 @@
-import { DataTypes, Sequelize} from "sequelize";
-import { IUserCreationAttributes, IUserModelInstance } from "../../interfaces/models/user";
+import { DataTypes} from "sequelize";
+import { IUserCreationAttributes} from "../../interfaces/models/user";
 import { sequelize } from "..";
 
 export const user = sequelize.define<any, IUserCreationAttributes>('user', {
