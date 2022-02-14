@@ -1,0 +1,25 @@
+{
+  "name": "Week15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.66.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^4.7.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:prod": "NODE_ENV=production webpack --env production",
+    "serve": "webpack-dev-server",
+    "serve:prod": "NODE_ENV=production webpack-dev-server --env production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
